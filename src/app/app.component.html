@@ -1,3 +1,148 @@
-<h1>
-  {{title}}
-</h1>
+<form>
+  <header>
+    <h1>Timmy Time</h1>
+    <h2>Two Thousand</h2>
+  </header>
+
+  <div class="beverages">
+    <div class="primary cf">
+      <div class="col">
+        <input type="radio" name="beverage" value="classic" id="classic">
+        <label for="classic">
+          <div class="image-box">
+            <img src="assets/cup2.svg" alt="coffee cup">
+          </div>
+          classic
+        </label>
+      </div>
+      <div class="col">
+        <input type="radio" name="beverage" value="dark" id="dark">
+        <label for="dark">
+          <div class="image-box">
+            <img src="assets/cup2.svg" alt="">
+          </div>
+          dark
+        </label>
+      </div>
+    </div>
+
+    <div class="secondary cf">
+      <div class="col">
+        <input type="radio" name="beverage" value="iced_cap" id="iced">
+        <label for="iced">
+          <div class="image-box">
+            <img src="assets/cup2.svg" alt="">
+          </div>
+          iced cap
+        </label>
+      </div>
+      <div class="col">
+        <input type="radio" name="beverage" value="iced_coffee" id="iced_coffee">
+        <label for="iced_coffee">
+          <div class="image-box">
+            <img src="assets/cup2.svg" alt="">
+          </div>
+          iced coffee
+        </label>
+      </div>
+      <div class="col">
+        <input type="radio" name="beverage" value="tea" id="tea">
+        <label for="tea">
+          <div class="image-box">
+            <img src="assets/cup2.svg" alt="">
+          </div>
+          tea
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="tea-options">
+    <select name="tea_options" id="">
+      <option value="Peppermint">Peppermint</option>
+      <option value="Green_Tea">Green Tea</option>
+      <option value="Earl_Grey">Earl Grey</option>
+      <option value="English_Breakfast">English Breakfast</option>
+      <option value="Orange_Pekoe">Orange Pekoe</option>
+      <option value="Decaf_Orange_Pekoe">Decaf Orange Pekoe</option>
+      <option value="Honey_Lemon">Honey Lemon</option>
+      <option value="Apple_Cinnamon">Apple Cinnamon</option>
+      <option value="Chamomile">Chamomile</option>
+      <option value="Chai_Tea">Chai Tea</option>
+      <option value="Steeped">Steeped (loose leaf)</option>
+    </select>
+  </div>
+
+  <div class="sizes cf">
+    <div class="col">
+      <input type="radio" name="size" value="sm" id="sm">
+      <label class="" for="sm">sm</label>
+    </div>
+    <div class="col">
+      <input type="radio" name="size" value="md" id="md">
+      <label for="md">md</label>
+    </div>
+    <div class="col">
+      <input type="radio" name="size" value="lg" id="lg">
+      <label for="lg">lg</label>
+    </div>
+    <div class="col">
+      <input type="radio" name="size" value="xl" id="xl">
+      <label for="xl">xl</label>
+    </div>
+  </div>
+
+  <div class="additives cf">
+    <div class="col">
+      <div>
+        <input type="hidden" name="milk" value="0">
+        <h2>0</h2>
+      </div>
+      <label>milk</label>
+    </div>
+    <div class="col">
+      <div>
+        <input type="hidden" name="cream" value="0">
+        <h2>2</h2>
+      </div>
+      <label>cream</label>
+    </div>
+    <div class="col">
+      <div>
+        <input type="hidden" name="sugar" value="0">
+        <h2>0</h2>
+      </div>
+      <label>sugar</label>
+    </div>
+  </div>
+
+  <div class="presets cf">
+    <div class="col">
+      <input type="radio" name="preset" value="black" id="black">
+      <label for="black">black</label>
+    </div>
+    <div class="col">
+      <input type="radio" name="preset" value="double" id="double">
+      <label for="double">double double</label>
+    </div>
+    <div class="col">
+      <input type="radio" name="preset" value="triple" id="triple">
+      <label for="triple">triple<br> triple</label>
+    </div>
+  </div>
+
+  <div class="text-fields">
+    <div>
+      <input type="text" name="name" value="" placeholder="name">
+    </div>
+    <div>
+      <input type="text" name="notes" value="" placeholder="special requests">
+    </div>
+  </div>
+
+  <div class="confirm">
+    <div class="colour">
+      <input type="submit" name="confirm" value="Order Up">
+    </div>
+  </div>
+</form>
