@@ -5,7 +5,6 @@ import { BEVERAGES } from '../beverages';
 @Component({
   selector: '.beverages',
   templateUrl: './beverages.component.html',
-  styleUrls: ['./beverages.component.css']
 })
 export class BeveragesComponent implements OnInit {
 
