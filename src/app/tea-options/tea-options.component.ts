@@ -4,13 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: '.tea-options',
   templateUrl: './tea-options.component.html',
 })
-export class TeaOptionsComponent implements OnInit {
+export class TeaOptionsComponent {
 
-  teas : ['Peppermint','Green Tea','Earl Grey','English Breakfast','Orange Pekoe','Honey Lemon','Apple Cinnamon','Chamomile','Chai Tea','Steeped (loose leaf)']
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  teas = ['Peppermint','Green Tea','Earl Grey','English Breakfast','Orange Pekoe','Honey Lemon','Apple Cinnamon','Chamomile','Chai Tea','Steeped (loose leaf)'];
 
 }
