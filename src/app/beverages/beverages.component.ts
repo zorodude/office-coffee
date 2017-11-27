@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Beverage } from '../beverage';
+import { BEVERAGES } from '../beverages';
 
 @Component({
   selector: '.beverages',
@@ -8,15 +9,13 @@ import { Beverage } from '../beverage';
 })
 export class BeveragesComponent implements OnInit {
 
-  beverage: Beverage = {
-    id: 1,
-    name: 'classic',
-    selected: false
-  }
+  beverages = BEVERAGES;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  // TODO: only for dev
+  get diagnostic() { return JSON.stringify(this.beverages); }
 }
