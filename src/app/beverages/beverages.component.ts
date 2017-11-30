@@ -6,15 +6,8 @@ import { BEVERAGES } from '../beverages';
   selector: '.beverages',
   templateUrl: './beverages.component.html',
 })
-export class BeveragesComponent implements OnInit {
+export class BeveragesComponent {
 
   beverages = BEVERAGES;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  // TODO: only for dev
-  get diagnostic() { return JSON.stringify(this.beverages); }
 }
