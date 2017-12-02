@@ -9,8 +9,6 @@ export class AppComponent {
   // TODO: handle sub-beverage options
   beverageOptions = 'handle tea options';
 
-  additives = ['milk','cream','sugar'];
-
   userName = "";
 
   notes = "";
