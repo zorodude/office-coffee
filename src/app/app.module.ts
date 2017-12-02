@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { BeveragesComponent } from './beverages/beverages.component';
 import { TeaOptionsComponent } from './tea-options/tea-options.component';
 import { SizesComponent } from './sizes/sizes.component';
+import { TextFieldsComponent } from './text-fields/text-fields.component';
+import { AdditivesComponent } from './additives/additives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeveragesComponent,
     TeaOptionsComponent,
-    SizesComponent
+    SizesComponent,
+    TextFieldsComponent,
+    AdditivesComponent
   ],
   imports: [
     BrowserModule,
