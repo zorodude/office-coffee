@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Beverage } from '../beverage';
 import { BEVERAGES } from '../beverages';
 
 @Component({
@@ -9,5 +8,7 @@ import { BEVERAGES } from '../beverages';
 export class BeveragesComponent {
 
   beverages = BEVERAGES;
+
+  default : string = 'classic';
 
 }

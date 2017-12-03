@@ -8,4 +8,6 @@ export class SizesComponent {
 
   sizes = ['sm','md','lg','xl'];
 
+  default : string = 'md';
+
 }

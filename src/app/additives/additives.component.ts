@@ -14,10 +14,17 @@ export class AdditivesComponent {
   //TODO remove: using for debug
   presets = PRESETS;
 
+  default : number;
+
+  // select ui when match is found
+  matches_preset = null;
+
   ngOnInit(){
     // set default
+    this.default = 1;
     this.usePreset(1);
-  };
+    this.checkPresetMatch();
+  }
 
   // add another when user clicks the digit
   increase(prop){
@@ -25,13 +32,37 @@ export class AdditivesComponent {
     if (this.additives[prop] > 9){
       this.additives[prop] = 0;
     }
-  };
+    this.checkPresetMatch();
+  }
 
   // copy from object, to preserve presets
   usePreset(preset){
     for (let key in this.additives) {
       this.additives[key] = PRESETS[preset][key];
     }
-  };
+  }
+
+  // @TODO preset highlights don't reset if user clicked preset, then digit. only when digits match true, then false.
+  checkPresetMatch(){
+    // highlight preset, if digits were individually modified and match
+    for (let i =0; i < PRESETS.length; i++) {
+      var perfect_match = true;
+      for (let key in this.additives) {
+        if (this.additives[key] !== PRESETS[i][key]) {
+          perfect_match = false;
+          break;
+        }else{
+        }
+      }
+      if (perfect_match){
+        console.log('found perfect match at ' +i);
+        this.matches_preset = i;
+        break;
+      }else{
+        console.log('no match found');
+        this.matches_preset = null;
+      }
+    }
+  }
 
 }

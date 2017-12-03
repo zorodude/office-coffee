@@ -1,4 +1,4 @@
 <div class="col" *ngFor="let size of sizes">
-  <input type="radio" name="size" value="{{size}}" id="{{size}}">
+  <input [checked]="size == default" type="radio" name="size" value="{{size}}" id="{{size}}">
   <label class="" for="{{size}}">{{size}}</label>
 </div>

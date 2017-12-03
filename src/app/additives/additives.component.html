@@ -22,15 +22,15 @@
 
 <div class="presets cf">
   <div class="col">
-    <input type="radio" name="preset" value="black" id="black">
+    <input [checked]="matches_preset == 0" type="radio" name="preset" value="black" id="black">
     <label (click)="usePreset(0)" for="black">black</label>
   </div>
   <div class="col">
-    <input type="radio" name="preset" value="double" id="double">
+    <input [checked]="matches_preset == 1" type="radio" name="preset" value="double" id="double">
     <label (click)="usePreset(1)" for="double">double double</label>
   </div>
   <div class="col">
-    <input type="radio" name="preset" value="triple" id="triple">
+    <input [checked]="matches_preset == 2" type="radio" name="preset" value="triple" id="triple">
     <label (click)="usePreset(2)" for="triple">triple<br> triple</label>
   </div>
 </div>
@@ -39,3 +39,5 @@
 <br>additives {{additives | json }}
 <br>
 <br>presets {{presets | json }}
+<br>
+<br> matches_preset {{matches_preset}}
