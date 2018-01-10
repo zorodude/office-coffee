@@ -40,11 +40,11 @@ export class AdditivesComponent {
     for (let key in this.additives) {
       this.additives[key] = PRESETS[preset][key];
     }
+    this.checkPresetMatch();
   }
 
-  // @TODO preset highlights don't reset if user clicked preset, then digit. only when digits match true, then false.
+  // highlight preset, if digits were individually modified and match
   checkPresetMatch(){
-    // highlight preset, if digits were individually modified and match
     for (let i =0; i < PRESETS.length; i++) {
       var perfect_match = true;
       for (let key in this.additives) {
