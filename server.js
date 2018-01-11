@@ -9,8 +9,6 @@ const coffee_collection = 'coffee';
 
 app.use(body_parser.json());
 
-require('./routes')(app,{});
-
 // create var outside of database callback to reuse connection pool
 var db_pool;
 
@@ -24,6 +22,8 @@ mongodb.MongoClient.connect(db_point.url, function(err, database){
   // save database object from callback for reuse
   // mongo 3 requires .db('dbname') syntax
   db_pool = database.db(db_point.db);
+  require('./routes')(app,db_pool);
+
   console.log('database connection ready');
 
   // initialize server
