@@ -8,6 +8,6 @@ export class Order {
     cream: number;
     sugar: number;
   };
-  notes: string;
+  notes?: string;
   tea?: string;
 }
