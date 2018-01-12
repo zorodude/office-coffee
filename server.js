@@ -9,6 +9,10 @@ const coffee_collection = 'coffee';
 
 app.use(body_parser.json());
 
+// point to app directory
+let app_dir = __dirname + '/dist/';
+app.use(express.static(app_dir));
+
 // create var outside of database callback to reuse connection pool
 var db_pool;
 

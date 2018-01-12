@@ -10,6 +10,8 @@ export class OrderService {
 
   // post new order
   create_order(new_order: Order): Promise <void | Order> {
+    console.log('service > create_order:');
+    console.log(new_order);
     return this.http.post('/new', new_order)
       .toPromise()
       .then(response => response.json() as Order)
