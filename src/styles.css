@@ -136,7 +136,7 @@ header h2{
 
 .text-fields input, .confirm .colour{
   width: 180px;
-  padding: 4px;
+  padding: 6px;
   margin: 6px 0 0;
   -webkit-appearance: none;
   appearance: none;
@@ -169,4 +169,11 @@ header h2{
   background-size: 100% 100%;
   transition: color 622ms, background-size ease-in 800ms;
   transition-timing-function: ease-in, cubic-bezier(0.23,0.6,0.96,0.84);
+}
+
+
+/* Angular validation */
+.text-fields input.ng-invalid.ng-dirty{
+  padding-left: 2px;
+  border-left: 4px solid #ff4d6c;
 }
