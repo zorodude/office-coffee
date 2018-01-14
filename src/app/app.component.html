@@ -21,7 +21,7 @@
 
   <div class="confirm">
     <div class="colour">
-      <input type="submit" name="confirm" value="Order Up">
+      <input type="submit" name="confirm" value="Order Up" [disabled]="beverageForm.invalid">
     </div>
   </div>
 
@@ -30,6 +30,6 @@
   {{beverageForm.value | json }}
   <br>
   <p>----</p>
-  {{this.order | json}}
+  {{ beverageForm.controls.name?.errors | json }}
 
 </form>

@@ -171,9 +171,12 @@ header h2{
   transition-timing-function: ease-in, cubic-bezier(0.23,0.6,0.96,0.84);
 }
 
+/* @TODO handle disabled button - change <input> to <button> to use bg color and grey it out.  */
 
 /* Angular validation */
-.text-fields input.ng-invalid.ng-dirty{
+.text-fields input.ng-invalid.ng-touched{
   padding-left: 2px;
   border-left: 4px solid #ff4d6c;
+}
+.error-message{
 }

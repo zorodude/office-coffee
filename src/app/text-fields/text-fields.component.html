@@ -1,5 +1,8 @@
 <div>
-  <input type="text" name="name" value="" placeholder="name" ngModel required>
+  <input #userName="ngModel" type="text" name="name" value="" placeholder="name" ngModel required>
+  <div *ngIf="userName.errors?.required && userName.touched" class="error-message">
+    Your name is required
+  </div>
 </div>
 <div>
   <input type="text" name="notes" value="" placeholder="special requests" ngModel>
