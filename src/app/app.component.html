@@ -1,4 +1,4 @@
-<form #beverageForm="ngForm">
+<form #beverageForm="ngForm" (ngSubmit)="onSubmit(beverageForm)">
   <header>
     <h1>Timmy Time</h1>
     <h2>Two Thousand</h2>
@@ -21,7 +21,10 @@
 
   <div class="confirm">
     <div class="colour">
-      <input (click)="create_new_order('poop')" type="submit" name="confirm" value="Order Up">
+      <input type="submit" name="confirm" value="Order Up">
     </div>
   </div>
+
+  {{beverageForm.value | json }}
+
 </form>
