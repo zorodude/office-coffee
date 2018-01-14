@@ -21,7 +21,6 @@ export class AppComponent {
     }
   }
 
-
   // submitted = false;
   onSubmit({ value, valid }: { value: Order, valid: boolean }) {
     console.log(value, valid);

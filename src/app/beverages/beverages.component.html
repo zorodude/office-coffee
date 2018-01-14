@@ -1,6 +1,6 @@
 <div class="primary cf">
   <div *ngFor="let bev of beverages | slice:0:2" class="col">
-    <input [checked]="bev == default" type="radio" name="beverage" value="{{bev}}" id="{{bev}}" required>
+    <input type="radio" name="beverage" value="{{bev}}" id="{{bev}}" required [ngModel]="default">
     <label for="{{bev}}">
       <div class="image-box">
         <img src="assets/cup2.svg" alt="coffee cup">
@@ -12,7 +12,7 @@
 
 <div class="secondary cf">
   <div *ngFor="let bev of beverages | slice:2" class="col">
-    <input [checked]="bev == default" type="radio" name="beverage" value="{{bev}}" id="{{bev}}" required>
+    <input type="radio" name="beverage" value="{{bev}}" id="{{bev}}" required [ngModel]="default">
     <label for="{{bev}}">
       <div class="image-box">
         <img src="assets/cup2.svg" alt="coffee cup">

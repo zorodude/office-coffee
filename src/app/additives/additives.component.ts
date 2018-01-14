@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { ControlContainer, NgForm } from '@angular/forms';
 import { Additives } from '../additives';
 import { PRESETS } from '../presets';
 
 @Component({
   selector: '.additives',
   templateUrl: './additives.component.html',
+  viewProviders: [{ provide: ControlContainer, useExisting: NgForm }]
 })
 export class AdditivesComponent {
 
