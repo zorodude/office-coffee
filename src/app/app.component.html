@@ -19,17 +19,17 @@
   <div class="text-fields">
   </div>
 
-  <div class="confirm">
+  <div *ngIf="!submitted" class="confirm">
     <div class="colour">
       <input type="submit" name="confirm" value="Order Up" [disabled]="beverageForm.invalid">
     </div>
+  </div>
+  <div *ngIf="submitted">
+    <p>Thank you.</p>
   </div>
 
 <br>
   <p>----</p>
   {{beverageForm.value | json }}
-  <br>
-  <p>----</p>
-  {{ beverageForm.controls.name?.errors | json }}
 
 </form>

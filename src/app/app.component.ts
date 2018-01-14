@@ -10,28 +10,21 @@ import { TextFieldsComponent } from './text-fields/text-fields.component';
 })
 export class AppComponent {
 
-  // submitted = false;
-  onSubmit({ value, valid }: { value: Order, valid: boolean }) {
-    console.log(value, valid);
-  }
-
   constructor (private order_service: OrderService) {}
 
-  // create_new_order(order: Order): void {
-  //   order = {
-  //     name: 'test',
-  //     beverage: 'dark roast',
-  //     size: 'md',
-  //     additives: {
-  //       milk: 2,
-  //       cream: 2,
-  //       sugar: 1
-  //     }
-  //   }
-  //
-  //   this.order_service.create_order(order).then((new_order: Order) => {
-  //     console.log('subitting ' +new_order);
-  //   });
-  // }
+  submitted = false;
+  onSubmit({ value, valid }: { value: Order, valid: boolean }) {
+
+    console.log(value, valid);
+    if(valid){
+      // @TODO await positive reply from server
+      this.submitted = true;
+      this.order_service.create_order(value).then((new_order: Order) => {
+        console.log('subitting ' +new_order);
+      });
+
+    }
+
+  }
 
 }
