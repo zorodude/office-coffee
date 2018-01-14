@@ -10,17 +10,6 @@ import { TextFieldsComponent } from './text-fields/text-fields.component';
 })
 export class AppComponent {
 
-  order : Order = {
-    name: 'test',
-    beverage: 'dark roast',
-    size: 'md',
-    additives: {
-      milk: 2,
-      cream: 2,
-      sugar: 1
-    }
-  }
-
   // submitted = false;
   onSubmit({ value, valid }: { value: Order, valid: boolean }) {
     console.log(value, valid);
