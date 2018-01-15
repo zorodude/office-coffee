@@ -1,35 +1,40 @@
 <form #beverageForm="ngForm" (ngSubmit)="onSubmit(beverageForm)">
-  <header>
-    <h1>Timmy Time</h1>
-    <h2>Two Thousand</h2>
-  </header>
+  <div class="form-contents" [hidden]="submitted">
+    <header>
+      <h1>Timmy Time</h1>
+      <h2>Two Thousand</h2>
+    </header>
 
-  <div class="beverages">
-  </div>
-
-  <div class="tea-options">
-  </div>
-
-  <div class="sizes cf">
-  </div>
-
-  <div class="additives cf">
-  </div>
-
-  <div class="text-fields">
-  </div>
-
-  <div *ngIf="!submitted" class="confirm">
-    <div class="colour">
-      <input type="submit" name="confirm" value="Order Up" [disabled]="beverageForm.invalid">
+    <div class="beverages">
     </div>
+
+    <div class="tea-options">
+    </div>
+
+    <div class="sizes cf">
+    </div>
+
+    <div class="additives cf">
+    </div>
+
+    <div class="text-fields">
+    </div>
+
+    <!-- @TODO add submitting state -->
+    <div *ngIf="!submitted" class="confirm">
+      <div class="colour">
+        <input type="submit" name="confirm" value="Order Up" [disabled]="beverageForm.invalid">
+      </div>
+    </div>
+
+  <br>
+    <p>----</p>
+    {{beverageForm.value | json }}
   </div>
-  <div *ngIf="submitted">
+
+  <div [hidden]="!submitted">
     <p>Thank you.</p>
   </div>
 
-<br>
-  <p>----</p>
-  {{beverageForm.value | json }}
 
 </form>
