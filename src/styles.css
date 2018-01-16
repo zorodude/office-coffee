@@ -27,6 +27,7 @@ label{
   position: relative;
   padding: 10px 0;
   width: 100%;
+  min-height: 40px;
   background: -webkit-linear-gradient(0, #fff568 0%, #fff500 100%);
   background: -o-linear-gradient(0, #fff568 0%, #fff500 100%);
   background: linear-gradient(0, #fff568 0%, #fff500 100%);
@@ -117,7 +118,7 @@ header h2{
   vertical-align: bottom;
 }
 .presets .col:first-child label{
-  margin-top: 8px;
+  padding-top: 8px;
 }
 
 .additives{
