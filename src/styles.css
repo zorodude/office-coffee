@@ -175,7 +175,7 @@ header h2{
 /* @TODO handle disabled button - change <input> to <button> to use bg color and grey it out.  */
 
 /* Angular validation */
-.text-fields input.ng-invalid.ng-touched{
+.text-fields input.ng-invalid.ng-touched, .text-fields .error{
   padding-left: 2px;
   border-left: 4px solid #ff4d6c;
 }

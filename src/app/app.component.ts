@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Order } from './order';
 import { OrderService } from './order.service';
-import { TextFieldsComponent } from './text-fields/text-fields.component';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: '#app-root',
@@ -10,12 +10,17 @@ import { TextFieldsComponent } from './text-fields/text-fields.component';
 })
 export class AppComponent {
 
-  constructor (private order_service: OrderService) {}
+  submit_invalid : Boolean = false;
+  constructor (private order_service: OrderService) {
+  }
 
   submitted = false;
   onSubmit({ value, valid }: { value: Order, valid: boolean }) {
 
-    console.log(value, valid);
+    console.log('onSubmit value:')
+    console.log(value);
+    console.log('onSubmit valid:')
+    console.log(valid);
     if(valid){
       // @TODO await positive reply from server
       this.submitted = true;
@@ -23,6 +28,10 @@ export class AppComponent {
         console.log('subitting ' +new_order);
       });
 
+    }else{
+      console.log('onSubmit: invalid form')
+      //pass error to display in child
+      this.submit_invalid = true;
     }
 
   }

@@ -1,9 +1,13 @@
 <div>
-  <input #userName="ngModel" type="text" name="name" value="" placeholder="name" ngModel required>
-  <div *ngIf="userName.errors?.required && userName.touched" class="error-message">
+  <input #userName="ngModel" type="text" name="name" value="" placeholder="name" ngModel required [ngClass]="{'error': is_invalid}">
+  <div *ngIf="userName.errors?.required && userName.touched || is_invalid" class="error-message">
     Your name is required
   </div>
 </div>
 <div>
   <input type="text" name="notes" value="" placeholder="special requests" ngModel>
 </div>
+<p>username:</p>
+{{ userName.value | json }}
+<p>new: {{ is_invalid }}</p>
+<p>new json: {{ is_invalid | json }}</p>

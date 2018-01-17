@@ -17,13 +17,13 @@
     <div class="additives cf">
     </div>
 
-    <div class="text-fields">
+    <div class="text-fields" [is_invalid]="submit_invalid">
     </div>
 
     <!-- @TODO add submitting state -->
     <div *ngIf="!submitted" class="confirm">
       <div class="colour">
-        <input type="submit" name="confirm" value="Order Up" [disabled]="beverageForm.invalid">
+        <input type="submit" name="confirm" value="Order Up">
       </div>
     </div>
 
