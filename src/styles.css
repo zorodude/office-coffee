@@ -135,8 +135,11 @@ header h2{
   padding: 0;
 }
 
-.text-fields input, .confirm .colour{
+.text-fields{
   width: 180px;
+}
+.text-fields input, .confirm .colour{
+  width: 100%;
   padding: 6px;
   margin: 6px 0 0;
   -webkit-appearance: none;
@@ -172,7 +175,6 @@ header h2{
   transition-timing-function: ease-in, cubic-bezier(0.23,0.6,0.96,0.84);
 }
 
-/* @TODO handle disabled button - change <input> to <button> to use bg color and grey it out.  */
 
 /* Angular validation */
 .text-fields input.ng-invalid.ng-touched, .text-fields .error{
@@ -180,4 +182,19 @@ header h2{
   border-left: 4px solid #ff4d6c;
 }
 .error-message{
+  position: relative;
+  padding: 0.3rem 0;
+  background: #ff4d6c;
+  width: 92%;
+  margin: 0.3rem auto 1rem auto;
+}
+.error-message::after{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #ff4d6c;
 }
