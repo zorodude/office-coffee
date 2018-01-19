@@ -16,7 +16,7 @@ body{
 }
 
 form{
-  max-width: 300px;
+  max-width: 260px;
   margin: 0 auto;
   padding: 1em;
   text-align: center;
@@ -66,10 +66,6 @@ header h2{
   display: inline-block;
 }
 
-.secondary, .presets, .additives{
-  width: 228px;
-  margin: 0 auto;
-}
 .beverages, .sizes, .presets, .additives{
   padding: 1em 0;
 }
@@ -93,14 +89,10 @@ header h2{
   width: 50%;
 }
 
-.tea-options{
-  /*display: none;*/
+.tea-options select{
+  width: 100%;
 }
 
-.sizes{
-  width: 228px;
-  margin: 0 auto;
-}
 .sizes .col{
   width: 25%;
 }
@@ -122,7 +114,7 @@ header h2{
 }
 
 .additives{
-  padding: 8px 0 0;
+  padding: 0.3rem 0.46rem;
 }
 .additives h2{
   font-family: 'Roboto Mono', monospace;
@@ -135,10 +127,7 @@ header h2{
   padding: 0;
 }
 
-.text-fields{
-  width: 180px;
-}
-.text-fields input, .confirm .colour{
+.text-fields input, .text-fields textarea, .confirm .colour{
   width: 100%;
   padding: 6px;
   margin: 6px 0 0;
@@ -146,16 +135,18 @@ header h2{
   appearance: none;
   border: 1px solid #acacac;
   border-radius: 3px;
+  font-family: inherit;
+  font-size: 16px;
 }
 
 .confirm .colour{
   display: inline-block;
   background: #363636;
-  width: 180px;
   padding: 2px 1px;
   border: none;
 }
 .confirm input{
+  font-size: 0.8rem;
   width: calc(100% - 6px);
   padding: 10px;
   border: 1px solid #fff568;
@@ -182,11 +173,11 @@ header h2{
   border-left: 4px solid #ff4d6c;
 }
 .error-message{
+  display: inline-block;
   position: relative;
-  padding: 0.3rem 0;
-  background: #ff4d6c;
-  width: 92%;
+  padding: 0.4rem 1.2rem;
   margin: 0.3rem auto 1rem auto;
+  background: #ff4d6c;
 }
 .error-message::after{
   content: "";
