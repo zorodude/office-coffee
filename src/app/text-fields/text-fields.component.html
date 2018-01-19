@@ -1,5 +1,5 @@
 <div>
-  <input #userName="ngModel" type="text" name="name" value="" placeholder="name" ngModel required [ngClass]="{'error': is_invalid}">
+  <input #userName="ngModel" type="text" name="name" value="" placeholder="name" ngModel required [ngClass]="{'error': is_invalid}" (ngModelChange)="clearErrors()">
   <div *ngIf="userName.errors?.required && userName.touched || is_invalid" class="error-message">
     Your name is required
   </div>

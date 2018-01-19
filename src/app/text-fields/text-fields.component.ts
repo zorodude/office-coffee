@@ -8,7 +8,11 @@ import { ControlContainer, NgForm } from '@angular/forms';
 })
 export class TextFieldsComponent {
 
-  // @TODO reset to clean status after field is editted
   @Input() is_invalid : Boolean;
+
+  // runs when <input> is modified
+  clearErrors(){
+    this.is_invalid = false;
+  }
 
 }
