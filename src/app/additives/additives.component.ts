@@ -57,11 +57,9 @@ export class AdditivesComponent {
         }
       }
       if (perfect_match){
-        console.log('found perfect match at ' +i);
         this.matches_preset = i;
         break;
       }else{
-        console.log('no match found');
         this.matches_preset = null;
       }
     }
