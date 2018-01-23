@@ -19,6 +19,14 @@ export class OrderService {
       .catch(this.handleError);
   }
 
+  // get all orders
+  retrieve_orders(): Promise <void | Order[]>{
+    return this.http.get('/all')
+      .toPromise()
+      .then(response => response.json())
+      .catch(this.handleError);
+  }
+
   private handleError (error: any){
     let err_msg = (error.message) ? error.message :
     error.status ? `${error.status} - ${error.statusText}` : `Server error`;
