@@ -32,8 +32,9 @@
     {{beverageForm.value | json }} -->
   </div>
 
-  <div [hidden]="!submitted">
-    <p>Thank you.</p>
+  <div class="order-sent" [hidden]="!submitted">
+    <h1>Done.</h1>
+    <h3>Your order was sent.</h3>
   </div>
 
 

@@ -139,6 +139,9 @@ header h2{
   font-size: 16px;
 }
 
+.confirm{
+  margin: 1rem 0 3rem 0;
+}
 .confirm .colour{
   display: inline-block;
   background: #363636;
@@ -164,6 +167,14 @@ header h2{
   background-size: 100% 100%;
   transition: color 622ms, background-size ease-in 800ms;
   transition-timing-function: ease-in, cubic-bezier(0.23,0.6,0.96,0.84);
+}
+
+.order-sent{
+  padding: 4rem 0 0;
+}
+.order-sent h3{
+  font-size: 1.22rem;
+  font-weight: 300;
 }
 
 
