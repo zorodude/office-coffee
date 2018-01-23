@@ -20,21 +20,21 @@
     <div class="text-fields" [is_invalid]="submit_invalid">
     </div>
 
-    <!-- @TODO add submitting state -->
     <div *ngIf="!submitted" class="confirm">
       <div class="colour">
-        <input type="submit" name="confirm" value="Order Up">
+        <input type="submit" name="confirm" [value]="button_text">
       </div>
     </div>
 
-  <!-- <br>
-    <p>----</p>
-    {{beverageForm.value | json }} -->
   </div>
 
   <div class="order-sent" [hidden]="!submitted">
     <h1>Done.</h1>
     <h3>Your order was sent.</h3>
+    <div class="order-id">
+      <p>order id:</p>
+      <p>{{order_id}}</p>
+    </div>
   </div>
 
 

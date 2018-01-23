@@ -176,6 +176,12 @@ header h2{
   font-size: 1.22rem;
   font-weight: 300;
 }
+.order-id{
+  margin-top: 3rem;
+}
+.order-id p{
+  margin: 0.2rem 0;
+}
 
 
 /* Angular validation */

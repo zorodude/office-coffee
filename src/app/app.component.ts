@@ -15,6 +15,9 @@ export class AppComponent {
   }
 
   submitted = false;
+  button_text = 'Order Up';
+  order_id : String;
+
   onSubmit({ value, valid }: { value: Order, valid: boolean }) {
 
     console.log('onSubmit value:')
@@ -22,10 +25,19 @@ export class AppComponent {
     console.log('onSubmit valid:')
     console.log(valid);
     if(valid){
-      // @TODO await positive reply from server
-      this.submitted = true;
-      this.order_service.create_order(value).then((new_order: Order) => {
-        console.log('subitting ' +new_order);
+      this.button_text = 'Processing...';
+
+      // this.order_service.create_order(value).then((new_order: Order) => {
+      // console.log('subitting ' +new_order);
+      this.order_service.create_order(value).then((reply) => {
+        if (reply.status === 'success'){
+          console.log('id is ' +reply.id)
+          this.button_text = 'Sent';
+          this.submitted = true;
+          this.order_id = reply.id;
+        }else{
+          console.log('Submit Error: ' +reply.message)
+        }
       });
 
     }else{

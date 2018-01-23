@@ -9,12 +9,13 @@ export class OrderService {
   constructor(private http: Http) { }
 
   // post new order
-  create_order(new_order: Order): Promise <void | Order> {
+  create_order(new_order: Order): Promise <any | Order> {
     console.log('service > create_order:');
     console.log(new_order);
     return this.http.post('/new', new_order)
       .toPromise()
-      .then(response => response.json() as Order)
+      // .then(response => response.json() as Order)
+      .then(response => response.json())
       .catch(this.handleError);
   }
 
