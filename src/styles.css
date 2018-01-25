@@ -66,10 +66,24 @@ header h2{
   display: inline-block;
 }
 
+input[type="text"], textarea, select, .confirm .colour{
+  width: 100%;
+  padding: 6px;
+  margin: 6px 0 0;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #acacac;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 16px;
+}
+textarea{
+  height: 3.6em;
+}
+
 .beverages, .sizes, .presets, .additives{
   padding: 1em 0;
 }
-
 .beverages label{
   padding: 9px 0;
 }
@@ -89,8 +103,22 @@ header h2{
   width: 50%;
 }
 
+.tea-options{
+  position: relative;
+}
 .tea-options select{
-  width: 100%;
+  background: #fff568;
+}
+.tea-options::after{
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #acacac;
 }
 
 .sizes .col{
@@ -125,41 +153,6 @@ header h2{
 }
 .additives label{
   padding: 0;
-}
-
-.text-fields input, .text-fields textarea, .confirm .colour, select{
-  width: 100%;
-  padding: 6px;
-  margin: 6px 0 0;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 1px solid #acacac;
-  border-radius: 3px;
-  font-family: inherit;
-  font-size: 16px;
-}
-
-textarea{
-  height: 3.6em;
-}
-
-.tea-options{
-  position: relative;
-}
-.tea-options select{
-  background: #fff568;
-}
-
-.tea-options::after{
-  content: "";
-  position: absolute;
-  top: 23px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #acacac;
 }
 
 .confirm{
