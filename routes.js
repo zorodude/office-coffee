@@ -1,6 +1,13 @@
 module.exports = function(app,db){
 
-  let collection = db.collection('orders');
+  // setup new collection based on time
+  var utc = new Date();
+  var dd = utc.getDate().toLocaleString(undefined, {minimumIntegerDigits: 2});
+  var mm = (utc.getMonth()+1).toLocaleString(undefined, {minimumIntegerDigits: 2});
+  var yyyy = utc.getFullYear();
+  var today = 'orders_' +yyyy +'_' +mm +'_' +dd;
+
+  let collection = db.collection(today);
 
   app.post('/new', function(req,res){
     console.log('routes > insert: ');
@@ -19,7 +26,7 @@ module.exports = function(app,db){
     })
   });
 
-  app.get('/all', function(req,res){
+  app.get('/orders', function(req,res){
     console.log('routes > get');
     collection.find({}).toArray(function(err,docs){
       if(err){
