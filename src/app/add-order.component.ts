@@ -4,7 +4,7 @@ import { OrderService } from './order.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: '#add-order',
+  selector: 'add-order',
   templateUrl: './add-order.component.html',
   providers: [ OrderService ]
 })
