@@ -22,7 +22,7 @@
 
     <div *ngIf="!submitted" class="confirm">
       <div class="colour">
-        <input type="submit" name="confirm" [value]="button_text">
+        <input type="submit" name="confirm" [value]="button_text" [ngClass]="{'processing': button_submitting}">
       </div>
     </div>
 

@@ -127,7 +127,7 @@ header h2{
   padding: 0;
 }
 
-.text-fields input, .text-fields textarea, .confirm .colour{
+.text-fields input, .text-fields textarea, .confirm .colour, select{
   width: 100%;
   padding: 6px;
   margin: 6px 0 0;
@@ -139,18 +139,41 @@ header h2{
   font-size: 16px;
 }
 
+textarea{
+  height: 3.6em;
+}
+
+.tea-options{
+  position: relative;
+}
+.tea-options select{
+  background: #fff568;
+}
+
+.tea-options::after{
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #acacac;
+}
+
 .confirm{
   margin: 1rem 0 3rem 0;
 }
 .confirm .colour{
   display: inline-block;
   background: #363636;
-  padding: 2px 1px;
+  padding: 4px 4px;
   border: none;
 }
 .confirm input{
   font-size: 0.8rem;
-  width: calc(100% - 6px);
+  width: 100%;
   padding: 10px;
   border: 1px solid #fff568;
   color: #fff568;
@@ -162,11 +185,20 @@ header h2{
   background-size: 100% 0%;
   background-position: 100% 100%;
 }
-.confirm input:hover{
+.confirm input.processing{
   color: #000;
   background-size: 100% 100%;
   transition: color 622ms, background-size ease-in 800ms;
   transition-timing-function: ease-in, cubic-bezier(0.23,0.6,0.96,0.84);
+}
+
+@keyframes rise-up {
+  0%{
+    background-size: 100% 0%;
+  },
+  100%{
+    background-size: 100% 100%;
+  }
 }
 
 .order-sent{

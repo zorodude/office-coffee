@@ -11,6 +11,7 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
 
   submit_invalid : Boolean = false;
+  button_submitting : Boolean = false;
   submitted = false;
   button_text = 'Order Up';
   order_id : String;
@@ -21,6 +22,7 @@ export class AppComponent {
 
     if(valid){
       this.button_text = 'Processing...';
+      this.button_submitting = true;
 
       this.order_service.create_order(value).then((reply) => {
         if (reply.status === 'success'){
@@ -29,6 +31,7 @@ export class AppComponent {
           this.order_id = reply.id;
         }else{
           console.log('DB Error: ' +reply.message)
+          this.button_submitting = false;
         }
       });
 
