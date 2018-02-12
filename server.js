@@ -1,5 +1,6 @@
 const mongodb = require('mongodb');
 const express = require('express');
+const path = require('path');
 const body_parser = require('body-parser');
 const db_point = require('./db');
 
@@ -12,6 +13,11 @@ app.use(body_parser.json());
 // point to app directory
 let app_dir = __dirname + '/dist/';
 app.use(express.static(app_dir));
+
+// point routes to index.html
+app.get('*', function(request, response){
+  response.sendFile(path.join( app_dir + '/index.html'));
+});
 
 // create var outside of database callback to reuse connection pool
 var db_pool;
