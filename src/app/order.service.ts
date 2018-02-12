@@ -20,8 +20,9 @@ export class OrderService {
 
   // get all orders
   // @TODO build a front-end for this (for print / checklist)
-  retrieve_orders(): Promise <void | Order[]>{
-    return this.http.get('/all')
+  // retrieve_orders(): Promise <void | Order[]>{
+  retrieve_orders(): Promise <any>{
+    return this.http.get('/orders')
       .toPromise()
       .then(response => response.json())
       .catch(this.handleError);
