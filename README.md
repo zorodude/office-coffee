@@ -2,7 +2,7 @@
 
 A small app for an office to place coffee orders.
 
-##History
+## History
 A personal project as a means to learn Angular (2+), and some basic back-end.
 
 The Backstory: Every Monday our office enjoys a round of coffee. An initial email @office goes out saying "place your orders", and is followed by 30 replies (all @office). This app aims to simplify the process by providing:
