@@ -9,6 +9,7 @@ export class OrderService {
   constructor(private http: Http) { }
 
   // post new order
+  //@TODO change any to use class
   create_order(new_order: Order): Promise <any> {
     console.log('service > create_order:');
     console.log(new_order);
@@ -21,7 +22,16 @@ export class OrderService {
   // get all orders
   // @TODO build a front-end for this (for print / checklist)
   // retrieve_orders(): Promise <void | Order[]>{
-  retrieve_orders(): Promise <any>{
+  // retrieve_orders(): Promise <any>{
+  //   console.log('service > retrieve_orders');
+  //   return this.http.get('/orders')
+  //     .toPromise()
+  //     .then(response => response.json() || [])
+  //     .catch(this.handleError);
+  // }
+
+  retrieve_orders(){
+    console.log('service: retrieve orders')
     return this.http.get('/orders')
       .toPromise()
       .then(response => response.json())

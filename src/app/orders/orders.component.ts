@@ -11,21 +11,23 @@ import { OrderService } from '../order.service';
 
 export class OrdersComponent implements OnInit {
 
-  r = {delivered: false, reply: 'unset'};
+  rep = {delivered: false, received: 'unset'};
+  orders: Order[];
 
   constructor (private order_service: OrderService){}
 
   ngOnInit() {
 
     // @TODO pull in all orders and pretty print
-    // this.order_service.retrieve_orders().then((reply) => {
-    //   if (reply.status === 'success'){
-    //     this.r.delivered = true;
-    //     this.r.reply = reply;
-    //   }else{
-    //     console.log('DB Error: ' +reply.message)
-    //   }
-    // });
+    this.order_service.retrieve_orders().then((reply) => {
+      if (reply.status === 'success'){
+        this.rep.delivered = true;
+        this.rep.received = reply;
+      }else{
+        console.log('DB Error: ' +reply.message)
+      }
+    });
+
   }
 
 }
