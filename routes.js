@@ -9,7 +9,7 @@ module.exports = function(app,db){
 
   let collection = db.collection(today);
 
-  app.post('/new', function(req,res){
+  app.post('/api/new', function(req,res){
     console.log('routes > insert: ');
     console.log(req.body);
     collection.insertOne(req.body,function(err,doc){
@@ -26,7 +26,7 @@ module.exports = function(app,db){
     })
   });
 
-  app.get('/orders', function(req,res){
+  app.get('/api/orders', function(req,res){
     console.log('routes > get');
     collection.find({}).toArray(function(err,docs){
       if(err){

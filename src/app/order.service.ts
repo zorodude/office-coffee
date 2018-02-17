@@ -13,7 +13,7 @@ export class OrderService {
   create_order(new_order: Order): Promise <any> {
     console.log('service > create_order:');
     console.log(new_order);
-    return this.http.post('/new', new_order)
+    return this.http.post('/api/new', new_order)
       .toPromise()
       .then(response => response.json())
       .catch(this.handleError);
@@ -30,9 +30,9 @@ export class OrderService {
   //     .catch(this.handleError);
   // }
 
-  retrieve_orders(){
+  retrieve_orders(): Promise <any>{
     console.log('service: retrieve orders')
-    return this.http.get('/orders')
+    return this.http.get('/api/orders')
       .toPromise()
       .then(response => response.json())
       .catch(this.handleError);
