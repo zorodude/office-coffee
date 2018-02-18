@@ -5,6 +5,7 @@ import { OrderService } from '../order.service';
 @Component({
   selector: '.orders',
   templateUrl: './orders.component.html',
+	styleUrls: ['./orders.css'],
   providers: [ OrderService ]
 })
 
