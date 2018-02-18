@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
 import { Order } from './order';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class OrderService {
@@ -19,22 +19,12 @@ export class OrderService {
       .catch(this.handleError);
   }
 
-  // get all orders
-  // @TODO build a front-end for this (for print / checklist)
-  // retrieve_orders(): Promise <void | Order[]>{
-  // retrieve_orders(): Promise <any>{
-  //   console.log('service > retrieve_orders');
-  //   return this.http.get('/orders')
-  //     .toPromise()
-  //     .then(response => response.json() || [])
-  //     .catch(this.handleError);
-  // }
-
-  retrieve_orders(): Promise <any>{
+	// get list of orders
+  retrieve_orders(): Promise <void | Order[]>{
     console.log('service: retrieve orders')
     return this.http.get('/api/orders')
       .toPromise()
-      .then(response => response.json())
+      .then(response => response.json() as Order[])
       .catch(this.handleError);
   }
 

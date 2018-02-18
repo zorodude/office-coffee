@@ -1,6 +1,24 @@
-<p>
-  r delivered: <span>{{rep.delivered}}</span>
-</p>
-<p>
-  r reply: <span>{{rep.received}}</span>
-</p>
+<table>
+	<thead>
+		<tr>
+			<th>Beverage</th>
+			<th>Size</th>
+			<th>Milk</th>
+			<th>Cream</th>
+			<th>Sugar</th>
+			<th>Name</th>
+			<th>Notes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let order of orders">
+			<td>{{order.beverage}}</td>
+			<td>{{order.size}}</td>
+			<td>{{order.additives.milk}}</td>
+			<td>{{order.additives.cream}}</td>
+			<td>{{order.additives.sugar}}</td>
+			<td>{{order.name}}</td>
+			<td>{{order.notes}}</td>
+		</tr>
+	</tbody>
+</table>

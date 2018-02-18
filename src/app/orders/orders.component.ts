@@ -19,13 +19,18 @@ export class OrdersComponent implements OnInit {
   ngOnInit() {
 		console.log('component: retrieve orderservice')
     // @TODO pull in all orders and pretty print
-    this.order_service.retrieve_orders().then((reply) => {
-      if (reply.status === 'success'){
-        this.rep.delivered = true;
-        this.rep.received = reply;
-      }else{
-        console.log('DB Error: ' +reply.message)
-      }
+    this.order_service.retrieve_orders().then((orders: Order[]) => {
+			this.orders = orders.map((order) => {
+				return order;
+			});
+			// this.orders = orders;
+      // if (reply.status === 'success'){
+      //   this.rep.delivered = true;
+      //   this.rep.received = reply;
+			// 	this.orders = reply.orders;
+      // }else{
+      //   console.log('DB Error: ' +reply.message)
+      // }
     });
 
   }
