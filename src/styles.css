@@ -224,17 +224,17 @@ additives label{
 /* view orders link */
 .orders-link{
   position: absolute;
-  top: 116px;
+  top: 92px;
   right: 0;
-  writing-mode: vertical-lr;
-  text-orientation: upright;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: -0.33em;
-  padding: 9px 4px;
+  letter-spacing: 0.2em;
+  padding: 1px 15px;
   border-radius: 3px;
   border: 1px solid #363636;
   color: #363636;
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
 }
 .orders-link:hover{
   background: #363636;
