@@ -84,13 +84,14 @@ textarea{
   height: 3.6em;
 }
 
-.beverages, .sizes, .presets, .additives{
+beverages, sizes, .presets, additives{
+  display: block;
   padding: 1em 0;
 }
-.beverages label{
+beverages label{
   padding: 9px 0;
 }
-.beverages img{
+beverages img{
   width: 25px;
   height: 40px;
 }
@@ -98,21 +99,22 @@ textarea{
   width: 38px;
   height: 60px;
 }
-.beverages .primary{
+beverages .primary{
   width: 160px;
   margin: 0 auto;
 }
-.beverages .primary .col{
+beverages .primary .col{
   width: 50%;
 }
 
-.tea-options{
+tea-options{
+  display: block;
   position: relative;
 }
-.tea-options select{
+tea-options select{
   background: #fff568;
 }
-.tea-options::after{
+tea-options::after{
   content: "";
   position: absolute;
   top: 23px;
@@ -124,10 +126,10 @@ textarea{
   border-top: 5px solid #acacac;
 }
 
-.sizes .col{
+sizes .col{
   width: 25%;
 }
-.sizes label{
+sizes label{
   position: relative;
   width: 100%;
   text-transform: uppercase;
@@ -144,17 +146,17 @@ textarea{
   padding-top: 8px;
 }
 
-.additives{
+additives{
   padding: 0.3rem 0.46rem;
 }
-.additives h2{
+additives h2{
   font-family: 'Roboto Mono', monospace;
   font-weight: 100;
   font-size: 6.4em;
   line-height: 1em;
   margin: 0;
 }
-.additives label{
+additives label{
   padding: 0;
 }
 
@@ -213,7 +215,8 @@ textarea{
 
 
 /* Angular validation */
-.text-fields input.ng-invalid.ng-touched, .text-fields .error{
+text-fields input.ng-invalid.ng-touched, text-fields .error{
+  display: block;
   padding-left: 2px;
   border-left: 4px solid #ff4d6c;
 }

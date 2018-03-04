@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 
 @Component({
-  selector: '.sizes',
+  selector: 'sizes',
   templateUrl: './sizes.component.html',
   viewProviders: [ { provide: ControlContainer, useExisting: NgForm } ]
 })

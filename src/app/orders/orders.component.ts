@@ -3,7 +3,7 @@ import { Order } from '../order';
 import { OrderService } from '../order.service';
 
 @Component({
-  selector: '.orders',
+  selector: 'orders',
   templateUrl: './orders.component.html',
 	styleUrls: ['./orders.css'],
   providers: [ OrderService ]

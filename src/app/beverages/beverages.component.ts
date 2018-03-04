@@ -3,7 +3,7 @@ import { ControlContainer, NgForm } from '@angular/forms';
 import { BEVERAGES } from '../beverages';
 
 @Component({
-  selector: '.beverages',
+  selector: 'beverages',
   templateUrl: './beverages.component.html',
   viewProviders: [{ provide: ControlContainer, useExisting: NgForm }]
 })

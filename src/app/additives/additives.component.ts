@@ -4,7 +4,7 @@ import { Additives } from '../additives';
 import { PRESETS } from '../presets';
 
 @Component({
-  selector: '.additives',
+  selector: 'additives',
   templateUrl: './additives.component.html',
   viewProviders: [{ provide: ControlContainer, useExisting: NgForm }]
 })

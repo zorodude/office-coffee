@@ -5,20 +5,15 @@
       <h2>Two Thousand</h2>
     </header>
 
-    <div class="beverages">
-    </div>
+    <beverages></beverages>
 
-    <div class="tea-options" *ngIf="beverageForm.value.beverage == 'tea'">
-    </div>
+    <tea-options *ngIf="beverageForm.value.beverage == 'tea'"></tea-options>
 
-    <div class="sizes cf">
-    </div>
+    <sizes class="cf"></sizes>
 
-    <div class="additives cf">
-    </div>
+    <additives class="cf"></additives>
 
-    <div class="text-fields" [is_invalid]="submit_invalid">
-    </div>
+    <text-fields [is_invalid]="submit_invalid"></text-fields>
 
     <div *ngIf="!submitted" class="confirm">
       <div class="colour">
@@ -36,6 +31,5 @@
       <p>{{order_id}}</p>
     </div>
   </div>
-
 
 </form>
