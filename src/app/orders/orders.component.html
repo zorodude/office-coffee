@@ -3,6 +3,7 @@
 		<tr>
 			<th></th>
 			<th>Beverage</th>
+			<th>Tea</th>
 			<th>Size</th>
 			<th>Milk</th>
 			<th>Cream</th>
@@ -15,6 +16,7 @@
 		<tr *ngFor="let order of orders">
 			<td><input type="checkbox"></td>
 			<td>{{order.beverage}}</td>
+			<td>{{order.tea}}</td>
 			<td>{{order.size}}</td>
 			<td>{{order.additives.milk}}</td>
 			<td>{{order.additives.cream}}</td>
