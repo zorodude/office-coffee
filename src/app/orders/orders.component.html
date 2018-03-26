@@ -1,28 +1,25 @@
-<table>
-	<thead>
-		<tr>
-			<th></th>
-			<th>Beverage</th>
-			<th>Tea</th>
-			<th>Size</th>
-			<th>Milk</th>
-			<th>Cream</th>
-			<th>Sugar</th>
-			<th>Name</th>
-			<th>Notes</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr *ngFor="let order of orders">
-			<td><input type="checkbox"></td>
-			<td>{{order.beverage}}</td>
-			<td>{{order.tea}}</td>
-			<td>{{order.size}}</td>
-			<td>{{order.additives.milk}}</td>
-			<td>{{order.additives.cream}}</td>
-			<td>{{order.additives.sugar}}</td>
-			<td>{{order.name}}</td>
-			<td>{{order.notes}}</td>
-		</tr>
-	</tbody>
-</table>
+<div class="orders-list">
+	<div *ngFor="let order of orders" class="row">
+		<div class="col-1">
+			<input type="checkbox">
+		</div>
+		<div class="col-2">
+			<div class="selection">
+				<span class="bold">
+					<span>{{order.beverage}}</span>
+					<span *ngIf="order.tea">: {{order.tea}}</span>
+				</span>
+				<span class="bold upcase">{{order.size}}</span>
+				<span>
+					<span>{{order.additives.milk}}<label>milk</label></span>
+					<span>{{order.additives.cream}}<label>cream</label></span>
+					<span>{{order.additives.sugar}}<label>sugar</label></span>
+				</span>
+			</div>
+			<div class="person">
+				<span><label>name</label> {{order.name}}</span>
+				<span *ngIf="order.notes" class="notes"><label>notes</label> {{order.notes}}</span>
+			</div>
+		</div>
+	</div>
+</div>

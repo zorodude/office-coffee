@@ -1,37 +1,39 @@
-<form #beverageForm="ngForm" (ngSubmit)="onSubmit(beverageForm)">
-  <div class="form-contents" [hidden]="submitted">
-    <header>
-      <h1>Timmy Time</h1>
-      <h2>Two Thousand</h2>
-    </header>
+<div class="outer-right">
+  <form #beverageForm="ngForm" (ngSubmit)="onSubmit(beverageForm)">
+    <div class="form-contents" [hidden]="submitted">
+      <header>
+        <h1>Timmy Time</h1>
+        <h2>Two Thousand</h2>
+      </header>
 
-    <beverages></beverages>
+      <beverages></beverages>
 
-    <tea-options *ngIf="beverageForm.value.beverage == 'tea'"></tea-options>
+      <tea-options *ngIf="beverageForm.value.beverage == 'tea'"></tea-options>
 
-    <sizes class="cf"></sizes>
+      <sizes class="cf"></sizes>
 
-    <additives class="cf"></additives>
+      <additives class="cf"></additives>
 
-    <text-fields [is_invalid]="submit_invalid"></text-fields>
+      <text-fields [is_invalid]="submit_invalid"></text-fields>
 
-    <div *ngIf="!submitted" class="confirm">
-      <div class="colour">
-        <input type="submit" name="confirm" [value]="button_text" [ngClass]="{'processing': button_submitting}">
+      <div *ngIf="!submitted" class="confirm">
+        <div class="colour">
+          <input type="submit" name="confirm" [value]="button_text" [ngClass]="{'processing': button_submitting}">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="order-sent" [hidden]="!submitted">
+      <h1>Done.</h1>
+      <h3>Your order was sent.</h3>
+      <div class="order-id">
+        <p>order id:</p>
+        <p>{{order_id}}</p>
       </div>
     </div>
 
-  </div>
+  </form>
 
-  <div class="order-sent" [hidden]="!submitted">
-    <h1>Done.</h1>
-    <h3>Your order was sent.</h3>
-    <div class="order-id">
-      <p>order id:</p>
-      <p>{{order_id}}</p>
-    </div>
-  </div>
-
-</form>
-
-<a href="orders" class="orders-link">Orders</a>
+  <a href="orders" class="orders-link">Orders</a>
+</div>
