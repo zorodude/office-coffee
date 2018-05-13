@@ -42,7 +42,7 @@ mongodb.MongoClient.connect(db_point.url, function(err, database){
 
   // initialize server
   app.listen(port, function(){
-    console.log('listening on ' +port);
+    console.log('listening on port ' +port);
   });
 
 });

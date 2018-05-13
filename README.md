@@ -24,4 +24,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Once your dist/ folder is generated:
 Run `mongod` to start the mongo database.
+
 Run `npm start` to launch the app.
